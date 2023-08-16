@@ -3,7 +3,7 @@
 
 Zombie Game is a simple web-based game where players can shoot zombies and increase their score. Players can keep track of their health and try to survive as long as possible.
 
-![Screenshot of the game](images/game.png)
+![Screenshot of the game](zombie-shooting/images/game.png)
 
 ## Features
 
