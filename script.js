@@ -98,9 +98,13 @@ const getRandomNum = (l, r) => Math.floor(Math.random() * (r - l + 1)) + l;
 
 const updateHealth = () => {
   health -= 1;
-  healthElem.innerText = health;
+  const heartElems = document.querySelectorAll('.heart-icon');
+  if (health < heartElems.length && heartElems[health]) {
+    heartElems[health].style.opacity = "0.2"; // or you can remove it with heartElems[health].remove();
+  }
   if (!health) endGame();
 };
+
 const pointsConvertion = (points, score) => {
   console.log(newValue);
   sign.innerText = "";
@@ -160,7 +164,8 @@ const endGame = () => {
   }
   idCounter = 0;
   health = 3;
-  healthElem.innerText = health;
+  //healthElem.innerText = health;
+  document.querySelectorAll('.heart-icon').forEach(heart => heart.style.opacity = "1");
   zombieContainer = {};
   points.innerText = "0".repeat(initialSizeScore);
   board.style.display = "none";

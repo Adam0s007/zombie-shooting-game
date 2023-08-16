@@ -170,7 +170,19 @@ left:-300px;
     font-size:30px;
     color:rgb(255, 255, 255);
     font-weight:bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.heart-icon {
+    width: 4rem;
+    height:  4rem;
+    
+    background:transparent;
+    
+  }
+  
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
@@ -220,13 +232,13 @@ left:-300px;
     .score {
         font-size: 36px;
         
-        top: 4rem;
+        top: calc(6px + 2rem + 4rem + 2rem);
         left:0;
     }
 
     .yourNick {
         font-size: 18px;
-        top: 2rem;
+        top: calc(6px + 2rem + 4rem);
         left:0;
         margin-left:-12px;
         transform:translateX(50%);
@@ -243,16 +255,16 @@ left:-300px;
     .score {
         font-size: 24px;
         right: 5px;
-        top: 2px;
+        
     }
 
     .yourNick {
         font-size: 14px;
-        top: 2px;
+     
     }
 
     .health-container {
-        top: 2px;
+       
         left: 2px;
         font-size: 14px;
     }
