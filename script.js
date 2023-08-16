@@ -10,6 +10,7 @@ const startButton = userWindow.querySelector(".startButton");
 const highScoreWindow = document.querySelector(".highscore-window");
 const leadersContainer = highScoreWindow.querySelector(".leaders-container");
 const startAgainButton = highScoreWindow.querySelector(".startAgainButton");
+const returnButton = highScoreWindow.querySelector(".returnButton")
 const sign = board.querySelector("#sign");
 const URL = "https://jsonblob.com/api/jsonBlob/1042868099266920448";
 const positionsInHighscore = 7;
@@ -180,7 +181,17 @@ const verifyingData = (e) => {
   startGame(); 
 };
 
-
+const returnButtonHandler = (e) =>{
+  e.preventDefault();
+  highScoreWindow.style.display = "none";
+  userWindow.style.display = "flex";
+  userNick.value = "";
+  sign.innerText = "";
+  newValue = 0;
+  points.innerText = "0".repeat(initialSizeScore);
+  startButton.addEventListener("click", verifyingData);
+  userNick.checkValidity();
+}
 
 const receiveHighscores = async () => {
     const URL = "https://zombie-game-2c70e-default-rtdb.firebaseio.com/zombies.json";
@@ -256,6 +267,7 @@ const sendHighscores = async (data) => {
 const startAll = () => {
   startButton.addEventListener("click", verifyingData);
   startAgainButton.addEventListener("click", verifyingData);
+  returnButton.addEventListener("click", returnButtonHandler);
 };
 
 startAll();

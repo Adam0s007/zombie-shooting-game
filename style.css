@@ -170,3 +170,66 @@ left:-300px;
     color:rgb(255, 255, 255);
     font-weight:bold;
 }
+
+
+/* Add responsive styles */
+@media (max-width: 1024px) {
+    .score {
+        font-size: 48px;
+        right: 20px;
+        top: 5px;
+    }
+
+    .yourNick {
+        font-size: 24px;
+        top: 5px;
+    }
+
+    .health-container {
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .score {
+        font-size: 36px;
+        
+        top: 4rem;
+        left:0;
+    }
+
+    .yourNick {
+        font-size: 18px;
+        top: 2rem;
+        left:0;
+        margin-left:-12px;
+        transform:translateX(50%);
+    }
+
+    .health-container {
+        top: 5px;
+        left: 5px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .score {
+        font-size: 24px;
+        right: 5px;
+        top: 2px;
+    }
+
+    .yourNick {
+        font-size: 14px;
+        top: 2px;
+    }
+
+    .health-container {
+        top: 2px;
+        left: 2px;
+        font-size: 14px;
+    }
+}
