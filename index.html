@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Zombie game</title>
+</head>
+<body>
+    
+        <form action="#" class="user">
+        <label for="nick">Enter your nick</label>
+        <input type="text" id="nick" pattern="([\p{L}]|[0-9]){3,16}"required> 
+        
+            
+        <ul class="desc">
+            <li>at least 3 characters</li>
+            <li>at most 16 characters</li>
+            <li>use only letters or numbers</li>
+        </ul>
+        <button class="startButton" formnovalidate>Start the game</button> 
+        </form>
+    
+    <section class="board">
+        <h1 class="score"><span id="sign"></span> <span id="proper">00000</span></h1>
+        <h1 class="yourNick">user <span></span></h1>
+        <h1 class="health-container">health: <span class="health">3</span></h1>
+    </section> 
+    
+    <section class="highscore-window">
+            <h1>Game over!</h1>
+            <h2>ranking:</h2>
+            <ul class="leaders-container">
+            </ul>
+            <button class="startAgainButton">PLAY AGAIN!</button>
+        
+    </section>
+
+</body>
+</html>
